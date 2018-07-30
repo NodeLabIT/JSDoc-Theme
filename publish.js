@@ -21,6 +21,13 @@ var view;
 
 var outdir = path.normalize(env.opts.destination);
 
+var date = new Date();
+var generateDate = ((date.getDate() + 1) < 10 ? "0" : "") + (date.getDate() + 1) + "." +
+	((date.getMonth() + 1) < 10 ? "0" : "") + (date.getMonth() + 1) + "." +
+	date.getFullYear() + " " +
+	(date.getHours() < 10 ? "0" : "") + date.getHours() + ":" +
+	(date.getMinutes() < 10 ? "0" : "") + date.getMinutes() + " Uhr";
+
 function find(spec) {
     return helper.find(data, spec);
 }
@@ -211,7 +218,8 @@ function generate(type, title, docs, filename, resolveLinks) {
     var docData = {
         type: type,
         title: title + " - " + env.opts.mainpagetitle,
-        docs: docs
+        docs: docs,
+		generateDate: generateDate
     };
 
     var outpath = path.join(outdir, filename),
@@ -634,10 +642,11 @@ exports.publish = function(taffyData, opts, tutorials) {
     // TODO: move the tutorial functions to templateHelper.js
     function generateTutorial(title, tutorial, filename) {
         var tutorialData = {
-            title: title,
+            title: title + " - " + env.opts.mainpagetitle,
             header: tutorial.title,
             content: tutorial.parse(),
-            children: tutorial.children
+            children: tutorial.children,
+            generateDate: generateDate
         };
 
         var tutorialPath = path.join(outdir, filename);

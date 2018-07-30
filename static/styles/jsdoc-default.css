@@ -13,7 +13,6 @@
 }
 
 html, body {
-  height: 100%;
   width: 100%;
 }
 
@@ -238,7 +237,6 @@ footer {
   padding: 30px;
   font-size: 80%;
   color: #999;
-  text-transform: lowercase;
   font-style: italic;
 }
 
