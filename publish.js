@@ -24,7 +24,7 @@ var outdir = path.normalize(env.opts.destination);
 var date = new Date();
 var generateDate = ((date.getDate() + 1) < 10 ? "0" : "") + (date.getDate() + 1) + "." +
 	((date.getMonth() + 1) < 10 ? "0" : "") + (date.getMonth() + 1) + "." +
-	date.getFullYear() + " " +
+	date.getFullYear() + " um " +
 	(date.getHours() < 10 ? "0" : "") + date.getHours() + ":" +
 	(date.getMinutes() < 10 ? "0" : "") + date.getMinutes() + " Uhr";
 
