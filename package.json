@@ -1,0 +1,16 @@
+{
+  "name": "jsdoc-theme",
+  "version": "1.0.0",
+  "description": "JSDoc-Theme for NodeLab's project-documentations",
+  "main": "publish.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NodeLabIT/JSDoc-Theme.git"
+  },
+  "author": "NodeLab IT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NodeLabIT/JSDoc-Theme/issues"
+  },
+  "homepage": "https://github.com/NodeLabIT/JSDoc-Theme#readme"
+}
