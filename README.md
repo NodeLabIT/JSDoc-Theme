@@ -4,6 +4,4 @@ A responsive documentation template-theme for JSDoc 3 by NodeLab forked from [La
 
 ## Install
 
-```
-$ 
-```
+TODO after npm-publish
