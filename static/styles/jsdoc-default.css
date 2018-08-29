@@ -110,8 +110,8 @@ tt, code, kbd, samp {
 }
 
 .class-description {
-  font-size: 130%;
-  line-height: 140%;
+  font-size: 11pt;
+  line-height: 130%;
   margin-bottom: 1em;
   margin-top: 1em;
 }
@@ -320,6 +320,7 @@ footer {
 }
 
 .description {
+    font-size: 10pt;
   margin-bottom: 1em;
   margin-top: 1em;
 }
@@ -440,6 +441,12 @@ footer {
 .params td.description > p:last-child, .props td.description > p:last-child {
    margin-bottom: 0;
    padding-bottom: 0;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid hsl(0, 0%, 87%);
+  outline: none;
 }
 
 dl.param-type {

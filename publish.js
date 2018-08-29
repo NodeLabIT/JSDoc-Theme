@@ -361,14 +361,13 @@ function buildNav(members) {
     var seen = {};
     var seenTutorials = {};
 
-    nav += buildMemberNav(members.classes, 'Classes', seen, linkto);
+    nav += buildMemberNav(members.classes, 'Klassen', seen, linkto);
+	nav += buildMemberNav(members.interfaces, 'Interfaces', seen, linkto);
     nav += buildMemberNav(members.modules, 'Modules', {}, linkto);
     nav += buildMemberNav(members.externals, 'Externals', seen, linktoExternal);
     nav += buildMemberNav(members.events, 'Events', seen, linkto);
-    nav += buildMemberNav(members.namespaces, 'Namespaces', seen, linkto);
+    nav += buildMemberNav(members.namespaces, 'Utilities', seen, linkto); // INFO: Changed from "Namespaces" to "Utilities" @ developing for WebSuite
     nav += buildMemberNav(members.mixins, 'Mixins', seen, linkto);
-    nav += buildMemberNav(members.tutorials, 'Tutorials', seenTutorials, linktoTutorial);
-    nav += buildMemberNav(members.interfaces, 'Interfaces', seen, linkto);
 
     if (members.globals.length) {
         var globalNav = '';
@@ -385,9 +384,11 @@ function buildNav(members) {
             nav += '<h3>' + linkto('global', 'Global') + '</h3>';
         }
         else {
-            nav += '<h3>Global</h3><ul>' + globalNav + '</ul>';
+            nav += '<h3>Globals</h3><ul>' + globalNav + '</ul>';
         }
     }
+
+	nav += buildMemberNav(members.tutorials, 'Tutorials', seenTutorials, linktoTutorial);
 
     return nav;
 }
