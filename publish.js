@@ -366,7 +366,7 @@ function buildNav(members) {
     nav += buildMemberNav(members.modules, 'Modules', {}, linkto);
     nav += buildMemberNav(members.externals, 'Externals', seen, linktoExternal);
     nav += buildMemberNav(members.events, 'Events', seen, linkto);
-    nav += buildMemberNav(members.namespaces, 'Utilities', seen, linkto); // INFO: Changed from "Namespaces" to "Utilities" @ developing for WebSuite
+    nav += buildMemberNav(members.namespaces, 'Namespaces', seen, linkto);
     nav += buildMemberNav(members.mixins, 'Mixins', seen, linkto);
 
     if (members.globals.length) {
