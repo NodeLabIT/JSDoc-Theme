@@ -89,7 +89,6 @@ var self = this;
     <?js });
 } } ?>
 
-<!--
 <?js if (data.returns && returns.length) { ?>
 <h5>Returns:</h5>
 <?js if (returns.length > 1) { ?><ul><?js
@@ -101,8 +100,6 @@ var self = this;
         <?js= self.partial('returns.tmpl', r) ?>
     <?js });
 } } ?>
-
--->
 
 <?js if (data.examples && examples.length) { ?>
     <h5>Example<?js= examples.length > 1? 's':'' ?></h5>
